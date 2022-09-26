@@ -157,6 +157,63 @@
       </section>
            <!---/showtimes-->
 
+           <!--Jumbotron heading-->
+        <div class="jumbotron jumbotron-fluid bg-info mt-5 text-center">
+          <div class="container">
+            <h1 class="display-4 hidden-sm-down" style="color:#fff;font-family:roboto;font-weight:900;text-transform:uppercase">Movie Deals</h1>
+            <p class ="lead">Check out our montly deals</p>
+            <!--movie deals-->
+            <button type="button" class="btn btn-outline-primary" data-container="body" data-target="#register" data-toggle="modal" data-placement="top" data-content="Submit your email to receive great movie reward deals! ">
+              See our monthly movie deals!
+            </button>
+            <!--/movie deals-->
+          </div>
+        </div>
+        <!--/Jumbotron heading-->
+        <!--Sign up form-->
+        <!--Form modal-->
+<div class="modal" tabindex="-1" role="dialog" id ="register">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Register to receive movie deals...</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <!--form info-->
+      <form>
+        <fieldset class="form-group">
+       
+          <label for="firstname">First Name:</label>
+          <input type="text" class="form-control" id="firstname" placeholder="First Name...">
+        </fieldset>
+        <fieldset class="form-group">
+        <label for="lastname">Last Name:</label>
+          <input type="text" class="form-control" id="lastname" placeholder="Last Name...">
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="email">Email</label>
+            <input type="text" class="form-control" id="email" placeholder="Email">
+          </fieldset>
+          <fieldset class="form-group">
+            <label for="password">Password</label>
+              <input type="text" class="form-control" id="password" placeholder="Password...">
+            </fieldset>
+      </form>
+
+      <!--/form info-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/Form modal-->
+
           <div class="text-center">
           
 
@@ -168,7 +225,7 @@
                     
                 </div>
               
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-lg btn-info popover-dismiss" data-placement="top" data-toggle="popover-dismiss" title="Submit your email!" data-content="Submit Your email to get best weekly deals!">Sign Up!</button>
             </form>
           </div>
 
@@ -196,6 +253,36 @@
                 </li>
             </ul>
           </div>
+
+          <!--Automatic popup without button!-->
+          
+
+          <div id="simpleModal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document" >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Welcome!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Thank You for visiting our Movie site! Enjoy!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            window.onload = function () {
+                OpenBootstrapPopup();
+            };
+            function OpenBootstrapPopup() {
+                $("#simpleModal").modal('show');
+            }
+        </script>
           </body>
         
 
@@ -207,17 +294,16 @@
 
     </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+   
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-    -->
+    
+
+    <script>
+     const popover = new bootstrap.Popover('.popover-dismiss', {
+  trigger: 'focus'
+})
+    </script>
   </body>
 </html>
